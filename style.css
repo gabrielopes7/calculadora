@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.container {
+  background-color: gray;
+  margin: auto;
+  max-width: 400px;
+  height: 500px;
+}
+
+.visor {
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+
+#inputVisor {
+  background-color: black;
+  font-size: 36px;
+  color: white;
+  border: none;
+  width: 300px;
+  height: 50px;
+}
+
+
+.quebrador {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: 75px 75px 75px 75px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: space-evenly;
+}
+
+.numbers {
+  background-color: lightgray;
+  text-align: center;
+  line-height: 1px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+p {
+  font-size: 28px;
+  user-select: none;
+  font-weight: 500;
+}
+
+.enter {
+  background-color: lightgray;
+  line-height: 40px;
+  width: 70px;
+  height: 100px;
+}
