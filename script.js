@@ -1,6 +1,6 @@
 let visor = document.getElementById("inputVisor");
-const somando = [];
-const subtraindo = [];
+let somando = [];
+let subtraindo = [];
 
 function getNumber(n) {
   visor.value += String(n);
@@ -30,7 +30,7 @@ function subtrair(sub) {
 }
 
 function limpar(){
-    value.text = "";
+    visor.value = "";
     somando = [];
     subtraindo = [];
 }
