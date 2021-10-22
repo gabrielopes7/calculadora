@@ -17,7 +17,6 @@ function getNumber(n) {
 function somar(add) {
   somando.push(add);
   visor.value = "";
-  console.log(somando);
 }
 
 function subtrair(sub) {
@@ -26,7 +25,6 @@ function subtrair(sub) {
     return a - b;
   });
   visor.value = "";
-  console.log(subtraindo);
 }
 
 function limpar(){
