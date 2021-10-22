@@ -15,6 +15,7 @@
 
 #inputVisor {
   background-color: black;
+  text-align: right;
   font-size: 36px;
   color: white;
   border: none;
@@ -38,6 +39,10 @@
   padding: 5px;
   width: 50px;
   height: 50px;
+}
+
+.limpar{
+  width: 240px;
 }
 
 p {
