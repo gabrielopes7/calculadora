@@ -11,31 +11,32 @@ function getNumber(n) {
 
   soma.setAttribute("onclick", `somar (${visor.value})`);
   subtrai.setAttribute("onclick", `subtrair(${visor.value})`);
-  resultado.setAttribute("onclick", `resultado(${visor.value})`);
+  resultado.setAttribute("onclick", `resultado(${visor.value})`); // Essa função pega o número digitado dos botões colocando os dentro do "visor da calculadora" e distribuindo eles para as funções soma/subtrai
 }
 
 function somar(add) {
-  somando.push(add);
+  somando.push(add); // Essa função adiciona os números no array e no visor
   visor.value = "";
 }
 
 function subtrair(sub) {
   subtraindo.push(sub);
   subtraindo.sort(function (b, a) {
+    // Essa função adiciona o números no array , organizando os números do maior > menor e adiciona no visor.
     return a - b;
   });
   visor.value = "";
 }
 
-function limpar(){
-    visor.value = "";
-    somando = [];
-    subtraindo = [];
+function limpar() {
+  visor.value = "";
+  somando = []; // Essa função "zera" tudo , o visor, e os arrays.
+  subtraindo = [];
 }
 
 function resultado() {
   if (visor.value != "") {
-    alert("Primeiro selecione a operação");
+    alert("Primeiro selecione a operação"); // Essa função testa se contém algo no visor, e dá os resultados das contas, pegando o que tem dentro do array e reduzindo em 1 array somado , ou subtraido.
   }
 
   if (somando != "") {
