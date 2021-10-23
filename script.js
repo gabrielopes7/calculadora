@@ -21,10 +21,6 @@ function somar(add) {
 
 function subtrair(sub) {
   subtraindo.push(sub);
-  subtraindo.sort(function (b, a) {
-    // Essa função adiciona o números no array , organizando os números do maior > menor e adiciona no visor.
-    return a - b;
-  });
   visor.value = "";
 }
 
