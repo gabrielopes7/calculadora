@@ -1,49 +1,69 @@
-let visor = document.getElementById("inputVisor");
 let somando = [];
 let subtraindo = [];
+let multiplicando = [];
+let dividindo = [];
 
-function getNumber(n) {
+
+let visor = document.getElementById("visor");
+let soma = document.getElementsByClassName("buttons")[11];
+let sub = document.getElementsByClassName("buttons")[7];
+let mult = document.getElementsByClassName("buttons")[3];
+
+
+function getNumbers(n) {
   visor.value += String(n);
-
-  let soma = document.getElementById("soma");
-  let subtrai = document.getElementById("subtrai");
-  let resultado = document.getElementById("resultado");
-
-  soma.setAttribute("onclick", `somar (${visor.value})`);
-  subtrai.setAttribute("onclick", `subtrair(${visor.value})`);
-  resultado.setAttribute("onclick", `resultado(${visor.value})`); // Essa função pega o número digitado dos botões colocando os dentro do "visor da calculadora" e distribuindo eles para as funções soma/subtrai
 }
 
-function somar(add) {
-  somando.push(add); // Essa função adiciona os números no array e no visor
-  visor.value = "";
-}
 
-function subtrair(sub) {
-  subtraindo.push(sub);
-  visor.value = "";
-}
-
-function limpar() {
-  visor.value = "";
-  somando = []; // Essa função "zera" tudo , o visor, e os arrays.
-  subtraindo = [];
+function contas(op){
+  if ( op == soma){
+    somando.push(Number(visor.value));
+  } else if (op == sub){
+    subtraindo.push(Number(visor.value));
+  } else if (op == mult){
+    multiplicando.push(Number(visor.value));
+  } else{
+    dividindo.push(Number(visor.value));
+  }
+  visor.value = ""
 }
 
 function resultado() {
   if (visor.value != "") {
-    alert("Primeiro selecione a operação"); // Essa função testa se contém algo no visor, e dá os resultados das contas, pegando o que tem dentro do array e reduzindo em 1 array somado , ou subtraido.
-  }
+    alert("Por favor, selecione uma operação!");
+  } else{
+    if (somando != "") {
+      let soma = somando.reduce((soma, somando) => soma + somando);
+      visor.value = soma;
+    }
+  
+    if (subtraindo != "") {
+      let subtrai = subtraindo.reduce(
+        (subtrai, subtraindo) => subtrai - subtraindo
+      );
+      visor.value = subtrai;
+    }
 
-  if (somando != "") {
-    let resultadoSoma = somando.reduce(
-      (resultadoSoma, somando) => resultadoSoma + somando
-    );
-    visor.value = resultadoSoma;
-  } else if (subtraindo != "") {
-    let resultadoSub = subtraindo.reduce(
-      (resultadoSub, subtraindo) => resultadoSub - subtraindo
-    );
-    visor.value = resultadoSub;
-  }
+    if (multiplicando != ""){
+      let multiplica = multiplicando.reduce(
+        (multiplica, multiplicando) => multiplica * multiplicando
+        );
+        visor.value = multiplica;
+    }
+
+    if (dividindo != ""){
+      let dividi = dividindo.reduce(
+        (dividi, dividindo) => dividi / dividindo
+      );
+      visor.value = dividi;
+    }
+  };
+}
+
+function limpar() {
+  visor.value = "";
+  subtraindo = [];
+  somando = [];
+  multiplicando = [];
+  dividindo = [];
 }

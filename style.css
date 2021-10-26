@@ -1,59 +1,46 @@
 @charset "UTF-8";
 
-.container {
-  background-color: gray;
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  background-color: aquamarine;
   margin: auto;
-  max-width: 400px;
-  height: 500px;
+  margin-top: 100px;
+  text-align: center;
+  width: 300px;
+  height: 400px;
 }
 
-.visor {
-  position: relative;
-  top: 20px;
-  left: 50px;
-}
-
-#inputVisor {
+.visor{
+  margin-top: 20px;
+  font-size: 2rem;
+  padding: 5px;
   background-color: black;
-  text-align: right;
-  font-size: 36px;
   color: white;
   border: none;
-  width: 300px;
-  height: 50px;
+  text-align: right;
+  width: 80%;
+  height: 40px;
 }
 
-
-.quebrador {
-  display: grid;
+.functions{
   margin-top: 50px;
-  grid-template-columns: 75px 75px 75px 75px;
-  grid-template-rows: 100px 100px 100px;
+  display: grid;
   justify-content: space-evenly;
+  grid-template-columns: 55px 55px 55px 55px;
+  grid-template-rows: 60px 60px 60px 60px;
 }
 
-.numbers {
-  background-color: lightgray;
+
+.buttons{
+  background-color: gray;
+  user-select: none;
   text-align: center;
-  line-height: 1px;
-  padding: 5px;
+  line-height: 50px;
+  border-radius: 8px;
   width: 50px;
   height: 50px;
-}
-
-.limpar{
-  width: 240px;
-}
-
-p {
-  font-size: 28px;
-  user-select: none;
-  font-weight: 500;
-}
-
-.enter {
-  background-color: lightgray;
-  line-height: 40px;
-  width: 70px;
-  height: 100px;
 }
