@@ -9,12 +9,13 @@ let soma = document.getElementsByClassName("buttons")[11];
 let sub = document.getElementsByClassName("buttons")[7];
 let mult = document.getElementsByClassName("buttons")[3];
 
-
+// Pega o número para ser mostrado no visor.
 function getNumbers(n) {
   visor.value += String(n);
 }
 
 
+// Essa função está direcionando os números para seus respectivos arrays.
 function contas(op){
   if ( op == soma){
     somando.push(Number(visor.value));
@@ -27,6 +28,8 @@ function contas(op){
   }
   visor.value = ""
 }
+
+// Essa função está testando os arrays, para saber qual resultado será mostrado a seguir.
 
 function resultado() {
   if (visor.value != "") {
@@ -59,6 +62,8 @@ function resultado() {
     }
   };
 }
+
+// Essa função está limpando toda a calculadora.
 
 function limpar() {
   visor.value = "";
